@@ -8,6 +8,7 @@
  */
 
 // Your code :
+const sameSign = (a, b) => (a === 0 && b === 0) ? true : (a > 0 && b > 0) ? true : (a < 0 && b < 0) ? true : false; 
 
 //* Begin of tests
 const assert = require('assert')

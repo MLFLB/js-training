@@ -8,6 +8,14 @@
  */
 
 // Your code:
+const isPositive = true
+if (isPositive) {
+  return true
+} else {
+  return false
+}
+
+
 
 
 //* Begin of tests

@@ -10,6 +10,22 @@
 
 // Your code :
 
+const multiply = (a, b) => {
+  let result = 0;
+  let i = 0;
+  if (b > 0) {
+    while (i < b) {
+      result += b;
+      b++;
+    }
+  } else {
+    while (i > b) {
+      result -= b;
+      b--;
+    }
+  }
+}
+
 //* Begin of tests
 const assert = require('assert')
 

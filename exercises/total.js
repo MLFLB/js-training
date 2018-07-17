@@ -6,6 +6,9 @@
  *
  */
 
+ const total = [1, 3, 7];
+ return total[0] + total[1] + total[2]; 
+
 
 //* Begin of tests
 const assert = require('assert')
