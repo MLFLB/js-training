@@ -10,20 +10,30 @@
 
 // Your code :
 
-const multiply = (a, b) => {
-  let result = 0;
-  let i = 0;
-  if (b > 0) {
-    while (i < b) {
-      result += b;
-      b++;
-    }
-  } else {
-    while (i > b) {
-      result -= b;
-      b--;
-    }
+function multiply(x, y) {
+
+  if (x == 0 || y == 0) {
+    return 0
   }
+
+  var resultSign = (x < 0) ?
+                   (y > 0) ? -1 : 1
+                   :
+                   (y < 0) ? -1 : 1;
+
+  x = volvAbs(x);
+  y = volvAbs(y);
+
+  function doMult(x, y) {
+    if (y === 0) return 0;
+    return x + doMult(x, y - 1);
+  }
+
+  return (resultSign === 1) ? doMult(x, y) : -doMult(x, y);
+}
+
+function volvAbs(x) {
+  return (x < 0) ? -x : x;
 }
 
 //* Begin of tests
