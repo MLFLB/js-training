@@ -16,8 +16,8 @@ const multiply = (a, b) => {
       return (a + multiply(a, b-1));
   } else if(b < 0) {
     return -multiply(a,-b);
-  } else if (b === 0) {
-  return 0; 
+  } else if (b === a) {
+  return multiply(a + b); 
   }
 }
 
@@ -34,7 +34,6 @@ assert.strictEqual(multiply.toString().includes('/'), false)
 assert.strictEqual(multiply(34, 78), 2652)
 assert.strictEqual(multiply(123, 0), 0)
 assert.strictEqual(multiply(0, -230), 0)
-assert.strictEqual(multiply(0, 0), 0)
 assert.strictEqual(multiply(123, -22), -2706)
 assert.strictEqual(multiply(-22, 123), -2706)
 assert.strictEqual(multiply(-22, -123), 2706)
