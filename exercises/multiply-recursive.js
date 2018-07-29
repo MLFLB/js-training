@@ -16,10 +16,10 @@ const multiply = (a, b) => {
       return (a + multiply(a, b-1));
   } else if(b < 0) {
     return -multiply(a,-b);
-  } else if (b === 0) {
+  } else if (b === 0 || a === 0) {
   return 0; 
   }
-}
+};
 
 //* Begin of tests
 const assert = require('assert')
